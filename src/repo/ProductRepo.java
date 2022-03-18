@@ -34,4 +34,7 @@ public class ProductRepo {
         productList.add(product);
     }
 
+    public List<Product> findByCategoryId(int categoryId){
+        return productList.stream().filter(product -> product.getCategoryId() == categoryId).collect(Collectors.toList());
+    }
 }

@@ -4,6 +4,7 @@ public class Product {
     private int id;
     private String name;
     private double price;
+    private int categoryId;
     private boolean status = false;
 
     public Product(int id, String name, double price, boolean status) {
@@ -13,6 +14,13 @@ public class Product {
         this.status = status;
     }
 
+    public Product(int id, String name, double price, boolean status, int categoryId) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.status = status;
+        this.categoryId = categoryId;
+    }
     public Product(int id, String name, double price) {
         this.id = id;
         this.name = name;
@@ -49,6 +57,14 @@ public class Product {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
     }
 
     @Override
