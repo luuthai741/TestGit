@@ -38,6 +38,9 @@ public class ProductService {
     }
 
     public List<Product> findByCategoryId(int categoryId){
-        return productRepo.findByCategoryId(categoryId);
+        List<Product> productList = productRepo.findByCategoryId(categoryId);
+        productList.forEach(product -> System.out.println(product.toString()));
+
+        return productList;
     }
 }
