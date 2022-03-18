@@ -41,4 +41,7 @@ public class ProductService {
         productRepo.saveProduct(product);
     }
 
+    public List<Product> findByCategoryId(int categoryId){
+        return productRepo.findByCategoryId(categoryId);
+    }
 }
