@@ -4,6 +4,14 @@ public class Product {
     private int id;
     private String name;
     private double price;
+    private boolean status = false;
+
+    public Product(int id, String name, double price, boolean status) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.status = status;
+    }
 
     public Product(int id, String name, double price) {
         this.id = id;
@@ -33,6 +41,14 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     @Override
