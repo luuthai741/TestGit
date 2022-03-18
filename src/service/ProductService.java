@@ -15,6 +15,10 @@ public class ProductService {
 
     public List<Product> getProductList(){
         List<Product> productList = productRepo.getProductList();
+        if(productList.isEmpty()){
+            System.out.println("Not have any product");
+            return null;
+        }
         productList.forEach(product -> System.out.println(product.toString()));
         return productList;
     }
