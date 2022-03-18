@@ -1,7 +1,7 @@
+import service.ProductService;
 import model.Category;
 import model.Product;
 import service.CateService;
-import service.ProductService;
 
 public class Main {
     public static void main(String[] args) {
