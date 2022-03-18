@@ -4,7 +4,8 @@ public class Product {
     private int id;
     private String name;
     private double price;
-
+    private boolean enabled;
+    
     public Product(int id, String name, double price) {
         this.id = id;
         this.name = name;
@@ -34,6 +35,14 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+    
+     public boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
 
     @Override
     public String toString() {
@@ -41,6 +50,7 @@ public class Product {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", price=" + price +
+                ", enabled=" + enabled +
                 '}';
     }
 }
